@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root  # Mật khẩu cho root
+      MYSQL_PASSWORD: 121503  # Mật khẩu cho người dùng MYSQL_USER (nếu cần thiết)
+      MYSQL_DATABASE: test_dockerdb  # Cơ sở dữ liệu sẽ được tạo ra khi container khởi động
+    ports:
+      - "3306:3306"
